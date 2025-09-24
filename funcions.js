@@ -3,18 +3,18 @@ const Number = [1, 2, 3, 4, 5];
 const Names = ['Ana', 'Newton', 'Ion', 'Maria', 'Vasile'];
 
 function main() {
-/*
+
     let numberPlus2 = myMap(Number, item => item + 2);
     console.log(numberPlus2);
 
     let namesWithLength = myMap(Names, item => item.length);
-    console.log(namesWithLength);*/
+    console.log(namesWithLength);
 
     let namesWithA = myFilter(Names, 'a' || 'A' );
     console.log(namesWithA);
 
-   /*let OraganiszedNames = myForEach(Names, item => item.includes('n'));
-    console.log(OraganiszedNames);*/
+   let OraganiszedNames = myForEach(Names, names => console.log(names));
+    console.log(OraganiszedNames);
 
 }
 
