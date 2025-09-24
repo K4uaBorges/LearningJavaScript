@@ -1,29 +1,44 @@
 
-Number = [1, 2, 3, 4, 5];
-Names = ['Ana', 'Newton', 'Ion', 'Maria', 'Vasile'];
+const Number = [1, 2, 3, 4, 5];
+const Names = ['Ana', 'Newton', 'Ion', 'Maria', 'Vasile'];
 
+function main() {
+/*
+    let numberPlus2 = myMap(Number, item => item + 2);
+    console.log(numberPlus2);
 
-function myForEach(array) {
-    for (let i in array) {
-        console.log(array[i]);
+    let namesWithLength = myMap(Names, item => item.length);
+    console.log(namesWithLength);*/
+
+    let namesWithA = myFilter(Names, 'a' || 'A' );
+    console.log(namesWithA);
+
+   /*let OraganiszedNames = myForEach(Names, item => item.includes('n'));
+    console.log(OraganiszedNames);*/
+
+}
+
+function myForEach(array, callback) {
+
+    for (i in array) {
+        callback(array[i]);
     };
+
 };
 
 
 function myMap(array, callback) {
+    
     let oldArray = array;
     array = [];
-    for (let i in oldArray) {
-        array[i] = callback(oldArray[i]);
+
+    for (i in oldArray) {
+        array[i] = callback((oldArray[i]));
     }
+
     return array;
 }
 
-//myForEach(array => console.log(array));
-
-function someArrayFor2(a) {
-    return a + 2;
-}
 
 
 function myFilter(array, element) {
@@ -36,6 +51,8 @@ function myFilter(array, element) {
     }
     return array;
 }
+
+
 
 function predicate(objectInFilter, element) {
 
@@ -52,6 +69,4 @@ function predicate(objectInFilter, element) {
 
 
 
-//console.log(myMap(Number, someArrayFor2));
-console.log(myFilter(Number, 2));
-//console.log(myForEach(Number));
+console.log(main());
